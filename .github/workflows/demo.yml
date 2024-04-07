@@ -1,5 +1,9 @@
 name: demo workflow
-on: [workflow_dispatch, pull_request]
+on: 
+  workflow_dispatch:
+  pull_request:
+    types:
+      - closed
 jobs:
   first-job:
     runs-on: ubuntu-latest
